@@ -45,7 +45,7 @@ const validateInput = computed(() => {
       <button class="btn btn-secondary mx-1" @click="reset">Resetear</button>
       <button class="btn btn-danger mx-1" @click="decrement">Disminuir</button>
     </div>
-    <button class="btn btn-primary mt-2 px-5" @click="add" :disabled="!validateInput">Agregar</button>
+    <button class="btn btn-primary mt-2 px-5" @click="add" :disabled="!validateInput">Agregar número favorito</button>
     <h2 class="mt-5">Numero favoritos:</h2>
     <ul class="list-group">
       <li class="list-group-item text-center" style="width: 200px;" v-for="num in listaNumeros">
