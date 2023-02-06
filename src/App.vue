@@ -1,35 +1,19 @@
 <script setup>
-const name = "Vue 3";
-const arrayFrutas = [
-    {
-        name: "Manzana",
-        price: "$1.00",
-        description: "Una manzana",
-        stock: 0,
-    },
-    {
-        name: "Pera",
-        price: "$2.00",
-        description: "Una pera",
-        stock: 10,
-    },
-    {
-        name: "Naranja",
-        price: "$3.00",
-        description: "Una naranja",
-        stock: 20,
-    },
-];
+const name = "Arturo Saldivar";
+
+
+// método
+const handleClick = (message) => {
+  console.log(message);
+}
+
 </script>
 
 <template>
-<ul>
-    <template v-for="fruta in arrayFrutas" :key="fruta.name">
-        <li v-if="fruta.stock > 0">
-            {{ fruta }}
-        </li>
-    </template>
-</ul>
+<h1>Hola {{ name.toUpperCase() }}</h1>
+<button @click.right="handleClick('Texto Right')">Activame right</button>
+<button @click.middle="handleClick('Texto Middle')">Activame middle</button>
+<button @click="handleClick('Texto Left')">Activame left</button>
 </template>
 
 <style scoped>
