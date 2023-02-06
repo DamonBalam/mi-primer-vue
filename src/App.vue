@@ -17,6 +17,11 @@ const decrement = () => {
 }
 
 const classCounter = computed( ()=> {
+
+  if (counter.value === 0) {
+    return 'color:peru'
+  }
+
   return counter.value > 0 ? 'color:green' : 'color:red'
 })
 
